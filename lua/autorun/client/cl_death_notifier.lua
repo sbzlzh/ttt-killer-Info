@@ -13,20 +13,19 @@ if CLIENT then
 		local name = net.ReadString()
 		local role =  tonumber(net.ReadString())
 		local reason = net.ReadString()
-        local col, role_text
 
         if role == ROLE_INNOCENT then
             col = InnoColor
-            role_text = LANG.GetTranslation("killer_innocent")
+            role = LANG.GetTranslation("killer_ply_innocent")
         elseif role == ROLE_TRAITOR then
             col = TraitorColor
-            role_text = LANG.GetTranslation("killer_traitor")
+            role = LANG.GetTranslation("killer_ply_traitor")
         elseif role == ROLE_DETECTIVE then
             col = DetectiveColor
-            role_text = LANG.GetTranslation("killer_detective")
+            role = LANG.GetTranslation("killer_ply_detective")
         else
             col = InnoColor
-            role_text = LANG.GetTranslation("killer_unknown")
+            role = LANG.GetTranslation("killer_unknowns")
         end
 
         if reason == "suicide" then
@@ -36,7 +35,7 @@ if CLIENT then
         elseif reason == "prop" then
             chat.AddText(NameColor, LANG.GetTranslation("killer_prop"))
         elseif reason == "ply" then
-            chat.AddText( NameColor, LANG.GetTranslation("killer_you"), White, LANG.GetTranslation("killer_yous"),col,name,White,LANG.GetTranslation("killer_comma"),col,role_text, LANG.GetTranslation("killer_exclamation"))
+            chat.AddText( NameColor, LANG.GetTranslation("killer_you"), White, LANG.GetTranslation("killer_yous"),col,name,White,LANG.GetTranslation("killer_comma"),col,role, LANG.GetTranslation("killer_exclamation"))
         elseif reason == "fell" then
             chat.AddText(NameColor, LANG.GetTranslation("killer_fell"))
         elseif reason == "water" then
