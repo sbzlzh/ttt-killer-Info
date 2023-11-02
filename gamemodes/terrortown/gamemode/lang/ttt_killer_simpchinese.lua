@@ -9,7 +9,7 @@ L.killer_ply_detective = "警探终结了"
 L.killer_fell = "你摔成了肉泥！"
 L.killer_water = "你以为自己是条鱼！"
 L.killer_unknown = "不知道你是怎么死的！"
-L.killer_unknowns = "Innocent"
+L.killer_unknowns = "未知"
 
 L.killer_you = "你"
 L.killer_yous = " 被 "

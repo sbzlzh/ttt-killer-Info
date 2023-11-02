@@ -9,7 +9,7 @@ L.killer_ply_detective = "Detective"
 L.killer_fell = "You are dropped to your death."
 L.killer_water = "You are drowned."
 L.killer_unknown = "Don't know how you died."
-L.killer_unknowns = "Innocent"
+L.killer_unknowns = "unknown"
 
 L.killer_you = "You are killed by"
 L.killer_yous = " "
