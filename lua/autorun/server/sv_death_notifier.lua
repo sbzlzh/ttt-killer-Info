@@ -8,7 +8,13 @@ if SERVER then
         if IsValid(inflictor) and inflictor:GetClass() == "env_fire" then return "burned" end
         if IsValid(attacker) and attacker:GetClass() == "prop_physics" then return "prop" end
         --if IsValid(inflictor) and inflictor:GetClass() == "weapon_ttt_jihad" then return "jihad" end
-        if IsValid(attacker) and attacker:IsPlayer() then return "ply", attacker:Nick(), attacker:GetRole() end
+        if IsValid(attacker) and attacker:IsPlayer() then
+            if attacker == victim then
+                return "suicide"
+            else
+                return "ply", attacker:Nick(), attacker:GetRole()
+            end
+        end
         return "suicide"
     end
 
